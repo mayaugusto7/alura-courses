@@ -1,0 +1,23 @@
+HTTP é um protocolo ele possui um conjunto de regras bem definidas,
+os dados são trafegados em texto puro, o que permite que qualquer
+pessoa possa interceptar as informações encaminhadas ao servidor
+
+
+Estrutura
+Cliente (Navegador e Browser) ---HTTP--- Servidor Tomcat (Plataforma Java) --- SQL --- Postgres DB
+
+Cliente faz uma requisicao 'Request'
+Servidor devolve uma Resposta 'Response'
+
+HTTPS os dados são trafegados com uma camadada
+a mais SSL/TLS que e uma camada de segurança, e os dados sao criptografados, ou seja forma mais segura.
+
+
+O Protocolo HTTPS e preciso ter uma identidade, que equivale um certificado digital
+que possui uma chave publica que criptografa os dados, do lado do servidor existe uma
+chave privada que descriptografa esses dados
+
+- O Http é stateless ele nao guarda estados, ou seja ele nao sabe o que foi retornado da requisição anterior.
+- Como ele e stateless, devemos manter o usuario na sessao atraves de um identificador JSESSIONID( ou token), guarda no navegador um cookie que tem um par de chave valor
+- Metodo GET ou POST Login, quando queremos passar informacoes confidenciais devemos utilizar o POST, que esconde o login  e senha do usuario, ja o GET esses parametro
+s sao passados na url

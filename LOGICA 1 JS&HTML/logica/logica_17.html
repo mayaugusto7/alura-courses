@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>    
+
+    var anoDescobrimento = 1500;
+    var anoAtual = new Date().getFullYear();
+    var mediaIdadeGeracao = 28;
+    var difDescobrimento = anoAtual - anoDescobrimento;
+
+    var qtdGeracoes = difDescobrimento / mediaIdadeGeracao; 
+
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem); 
+    }
+
+    mostra("Após o descobrimento ja se passaram " + qtdGeracoes + " gerações.");
+
+</script>
